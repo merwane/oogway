@@ -1,6 +1,6 @@
 module.exports = {
     title: 'oogway',
-    description: "A secure Bitcoin library for Python.",
+    description: "A secure Bitcoin utility library for Python.",
     themeConfig:{
         nav: [
             { text: '6conf', link: 'https://6conf.com' },
@@ -56,11 +56,11 @@ module.exports = {
       ['link', { rel: 'mask-icon', type: 'image/png', href: 'safari-pinned-tab.svg', color: '#ff9900' }],
       ['meta', { name: 'theme-color', content: '#ff9900' }],
       ['meta', { name: 'og:title', content: 'oogway' }],
-      ['meta', { name: 'og:description', content: 'A secure Bitcoin library for Python.' }],
+      ['meta', { name: 'og:description', content: 'A secure Bitcoin utility library for Python.' }],
       ['meta', { name: 'og:url', content: 'https://oogway.6conf.com' }],
       ['meta', { name: 'og:image', content: 'https://oogway.6conf.com/meta_640.png' }],
       ['meta', { name: 'twitter:title', content: 'oogway' }],
-      ['meta', { name: 'twitter:description', content: 'A secure Bitcoin library for Python.'}],
+      ['meta', { name: 'twitter:description', content: 'A secure Bitcoin utility library for Python.'}],
       ['meta', { name: 'twitter:card', content: 'summary_image' }],
       ['meta', { name: 'twitter:site', content: '@merwanedr' }],
       ['meta', { name: 'twitter:image', content: 'https://oogway.6conf.com/meta_640.png' }],
