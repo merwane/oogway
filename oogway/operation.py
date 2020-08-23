@@ -1,7 +1,6 @@
 import decimal
 from oogway.convert import convert
 
-
 class operation:
 
     @staticmethod

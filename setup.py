@@ -1,11 +1,12 @@
 import setuptools
+from oogway import __version__
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
         name="oogway",
-        version="1.0.0",
+        version=__version__,
         author="Merwane Drai",
         author_email="merwane@6conf.com",
         description="A simple, yet secure Bitcoin library",

@@ -14,6 +14,8 @@ class Mnemonic:
         return os.path.join(os.path.dirname(__file__), "wordlist")
 
     def generate(self, strength=128):
+        if strength not in [128, 160, 192, 224, 256]:
+            raise ValueError("Strength should be one of the following [128, 160, 192, 224, 256]")
         return self.to_mnemonic(os.urandom(strength // 8))
 
     def to_mnemonic(self, data):

@@ -1,5 +1,5 @@
 # oogway
-**oogway** is a simple, yet secure Bitcoin library.
+**oogway** is a simple, yet secure Bitcoin utility library for Python.
 
 [![Supported Versions](https://img.shields.io/pypi/pyversions/oogway.svg?&style=flat)](https://pypi.org/project/oogway)
 [![Build](https://img.shields.io/travis/merwane/oogway.svg?branch=master&style=flat)](https://pypi.org/project/oogway)
@@ -43,7 +43,15 @@ $ pip install oogway
 ---------------
 Read the library documentation at [6conf.com](https://oogway.6conf.com).
 
-The documentation page uses [docusaurus](https://docusaurus.io) and is updated separately. Every pull request adding or modifying features must be followed by another pull request for updating the docs. The documentation repository is available [here](https://github.com/merwane/oogway-docs).
+The documentation is automatically updated after each commit to the master branch. Every pull request adding or modifying features must contain a documentation update (Markdown).
+
+Docs are generated using [VuePress](https://vuepress.vuejs.org/). To run the docs locally, do:
+
+```console
+$ cd docs/
+$ npm install
+$ npm run docs:dev
+```
 
 ## Implemented features
 --------------
@@ -60,4 +68,4 @@ Check the [changelog](https://github.com/merwane/oogway/blob/master/CHANGELOG.md
 
 ## Notes
 -------------
-* oogway isn't the only Python Bitcoin library. It was heavily inspired by [ofek/bit](https://github.com/ofek/bit). oogway tries to focus on security while remaining simple and accessible.
+* oogway is one of many Python Bitcoin libraries. It was heavily inspired by [ofek/bit](https://github.com/ofek/bit). oogway tries to focus on security while remaining simple and accessible.
