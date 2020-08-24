@@ -36,5 +36,6 @@ setuptools.setup(
         entry_points='''
             [console_scripts]
             oogway=oogway.cli.cli:cli
-        '''
+        ''',
+        include_package_data = True
         )
