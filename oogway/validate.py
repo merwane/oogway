@@ -1,5 +1,5 @@
-from oogway.utils.base58 import b58check
-from oogway.utils.bech32 import bech32_decode
+from .utils.base58 import b58check
+from .utils.bech32 import bech32_decode
 import re
 
 ADDRESS_REGEX = "^[13][a-km-zA-HJ-NP-Z1-9]{25,34}$"

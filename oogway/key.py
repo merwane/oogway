@@ -1,8 +1,8 @@
 import hashlib
-from oogway.seed.gen import Mnemonic
-from oogway.utils.crypto import doublehash256
-from oogway.utils.base58 import b58encode
-from oogway.address import Address
+from .seed.gen import Mnemonic
+from .utils.crypto import doublehash256
+from .utils.base58 import b58encode
+from .address import Address
 
 def gen_hex(_hash):
     """converts private key to hex format"""

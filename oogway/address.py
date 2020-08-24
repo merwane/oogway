@@ -1,9 +1,9 @@
 import binascii
 import hashlib
 import ecdsa
-from oogway.utils.base58 import b58encode
-from oogway.utils import bech32
-from oogway.utils.crypto import doublehash256
+from .utils.base58 import b58encode
+from .utils import bech32
+from .utils.crypto import doublehash256
 
 def hash160(v):
     r = hashlib.new('ripemd160')

@@ -1,5 +1,5 @@
 import decimal
-from oogway.convert import convert
+from .convert import convert
 
 class operation:
 
