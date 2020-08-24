@@ -2,7 +2,7 @@ import os
 import hashlib
 import binascii
 import hmac
-from .utils.base58 import b58encode
+from .base58 import b58encode
 
 class Mnemonic:
     def __init__(self):
