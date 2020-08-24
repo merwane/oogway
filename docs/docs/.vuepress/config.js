@@ -46,6 +46,14 @@ module.exports = {
                   '/operation/',
                   '/operation/reference'
               ]
+            },
+            {
+              title: 'Fees',
+              collapsable: true,
+              children: [
+                  '/fees/',
+                  '/fees/reference'
+              ]
             }
           ]
     },
