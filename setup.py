@@ -9,7 +9,7 @@ setuptools.setup(
         version=__version__,
         author="Merwane Drai",
         author_email="merwane@6conf.com",
-        description="A simple, yet secure Bitcoin library",
+        description="A simple, yet secure Bitcoin utility library",
         long_description = long_description,
         long_description_content_type = "text/markdown",
         url = "https://github.com/merwane/oogway",
