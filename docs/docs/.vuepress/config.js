@@ -61,7 +61,7 @@ module.exports = {
       ['meta', { name: 'og:image', content: 'https://oogway.6conf.com/meta_640.png' }],
       ['meta', { name: 'twitter:title', content: 'oogway' }],
       ['meta', { name: 'twitter:description', content: 'A secure Bitcoin utility library for Python.'}],
-      ['meta', { name: 'twitter:card', content: 'summary_image' }],
+      ['meta', { name: 'twitter:card', content: 'summary' }],
       ['meta', { name: 'twitter:site', content: '@merwanedr' }],
       ['meta', { name: 'twitter:image', content: 'https://oogway.6conf.com/meta_640.png' }],
       ['meta', { name: 'twitter:image:alt', content: 'Bitcoin logo' }],
