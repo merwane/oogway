@@ -66,7 +66,7 @@ def parse_request(uri):
     
     res['amount'] = convert.to_satoshi(res['amount'], string=True)
     
-    if created != 0:
+    if res['created'] != 0:
         created = int(res['created'])
         res['created'] = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(created))
 
