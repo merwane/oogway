@@ -33,3 +33,21 @@ def test_operation_module():
         imported = False
 
     assert imported == True
+
+def test_fees_module():
+    try:
+        from oogway import get_fees
+        imported = True
+    except ImportError:
+        imported = False
+
+    assert imported == True
+
+def test_request_module():
+    try:
+        from oogway import request_payment
+        imported = True
+    except ImportError:
+        imported = False
+
+    assert imported == True
