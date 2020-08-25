@@ -17,6 +17,24 @@ Generating a payment request using oogway only takes one line of code:
 'bitcoin:1FHXDkRLhoCziRjftaPB3fELUYrZomFanx?amount=0.00020000&time=1598321506&exp=3600&message=from%20oogway%20with%20love'
 ```
 
+## Parse request
+
+Parsing payment requests is also possible with oogway:
+
+```python
+>>> from oogway import parse_request
+>>> parse_request("bitcoin:1FHXDkRLhoCziRjftaPB3fELUYrZomFanx?amount=0.00020000&time=1598321506&exp=3600&message=from%20oogway%20with%20love")
+
+{
+    'address': '1FHXDkRLhoCziRjftaPB3fELUYrZomFanx',
+    'amount': '20000',
+    'created': '2020-08-25 04:11:46',
+    'status': 'expired',
+    'exp': '3600',
+    'message': 'from oogway with love'
+}
+```
+
 ## CLI
 
 You can also generate payment requests using the CLI:

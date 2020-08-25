@@ -1,8 +1,8 @@
 # RELEASES
 
-## *0.3.0* (08-25-2020)
+## *0.3.1* (08-25-2020)
 _______________________
-* Added payment request generation method
+* Added payment request methods
 
 ## *0.2.0* (08-24-2020)
 _______________________

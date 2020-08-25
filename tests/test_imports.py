@@ -45,7 +45,7 @@ def test_fees_module():
 
 def test_request_module():
     try:
-        from oogway import request_payment
+        from oogway import request_payment, parse_request
         imported = True
     except ImportError:
         imported = False
