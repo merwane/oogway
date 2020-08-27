@@ -53,19 +53,6 @@ $ npm install
 $ npm run docs:dev
 ```
 
-## Implemented features
---------------
-Check the [changelog](https://github.com/merwane/oogway/blob/master/CHANGELOG.md).
-
-* Generate a secure mnemonic phrase (BIP39).
-* Generate a private key in wif and hex format.
-* Generate a compressed and uncompressed public key.
-* Generate an address in all formats (P2PKH, P2SH, Bech32).
-* Validate addresses by format.
-* Safely convert between bitcoin units (BTC, Satoshi).
-* Safely operate with bitcoin units (BTC, Satoshi).
-* CLI.
-
 ## Notes
 -------------
 * oogway is one of many Python Bitcoin libraries. It was heavily inspired by [ofek/bit](https://github.com/ofek/bit). oogway tries to focus on security while remaining simple and accessible.

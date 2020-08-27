@@ -4,7 +4,7 @@ title: Fees overview
 
 # Fees
 
-oogway provides a method to get recommended transaction fees in Satoshis per byte.
+oogway provides a method to get recommended transaction fees in Satoshis per byte via [Blockstream](https://blockstream.info/) or [Earn.com](https://bitcoinfees.earn.com/).
 
 ## Get fees
 

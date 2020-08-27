@@ -62,6 +62,14 @@ module.exports = {
                   '/payments/',
                   '/payments/reference'
               ]
+            },
+            {
+              title: 'Network',
+              collapsable: true,
+              children: [
+                  '/network/',
+                  '/network/reference'
+              ]
             }
           ]
     },

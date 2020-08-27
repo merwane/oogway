@@ -1,5 +1,9 @@
 # RELEASES
 
+## *0.4.0* (08-27-2020)
+_______________________
+* Added network methods
+
 ## *0.3.1* (08-25-2020)
 _______________________
 * Added payment request methods
