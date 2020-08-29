@@ -70,6 +70,14 @@ module.exports = {
                   '/network/',
                   '/network/reference'
               ]
+            },
+            {
+              title: 'Node',
+              collapsable: true,
+              children: [
+                  '/node/',
+                  '/node/reference'
+              ]
             }
           ]
     },

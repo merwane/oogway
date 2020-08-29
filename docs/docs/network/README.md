@@ -4,7 +4,7 @@ title: Network
 
 # Network
 
-The network method can be used for interacting with Bitcoin APIs to retrieve balances, transactions and unspents. It is advisable to retrieve these from your own node, but this isn't supported by oogway yet.
+The network method can be used for interacting with Bitcoin APIs to retrieve balances, transactions and unspents. It is however advisable to retrieve these from your own node, using the [Node](/node) method.
 
 ## Get balance
 
