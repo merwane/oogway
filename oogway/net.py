@@ -19,7 +19,9 @@ class Net:
         return r
 
     def utxo(self, address):
-        if self.provider == "blockstream":
-            raise ValueError("Retrieving UTXO from Blockstream unsupported. Use Blockchair.")
         r = self.provider.utxo(address)
+        return r
+
+    def broadcast(self, tx_hex):
+        r = self.provider.broadcast(tx_hex)
         return r

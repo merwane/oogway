@@ -30,7 +30,7 @@ setuptools.setup(
             'Programming Language :: Python :: 3.7',
             'Programming Language :: Python :: 3.8'
             ),
-        install_requires=("ecdsa", "Click", "requests"),
+        install_requires=("ecdsa", "Click", "requests", "coincurve"),
         tests_require=["pytest"],
         packages = setuptools.find_packages(),
         entry_points='''

@@ -2,6 +2,8 @@ import requests
 from .exceptions import ApiError
 from .convert import convert
 from .utils.crypto import bytes_to_hex
+from .tx import address_to_scriptpubkey
+from .utils.meta import Unspent
 
 class Blockchair:
     """retrieve blockchain data using the Blockchair API"""
@@ -159,3 +161,39 @@ class Blockstream:
         transactions.extend(unconfirmed)
 
         return transactions
+    
+    def utxo(self, address):
+        """get unspents"""
+        endpoint = self.endpoint + 'blocks/tip/height'
+        r_block = requests.get(endpoint)
+        if r_block.status_code != 200:
+            raise ApiError("Blockstream API unreachable")
+
+        block_height = int(r_block.text)
+
+        utxo_endpoint = (self.endpoint+self.address_info+self.unspent).format(address)
+        r = requests.get(utxo_endpoint)
+        if r.status_code == 400 and r.text == "Too many history entries":
+            raise ApiError("Excessive address")
+        elif r.status_code != 200:
+            raise ApiError("Blockstream API unreachable")
+
+        script_pubkey = bytes_to_hex(address_to_scriptpubkey(address))
+        return sorted(
+            [
+                Unspent(
+                    tx["value"],
+                    block_height - tx["status"]["block_height"] + 1 if tx["status"]["confirmed"] else 0,
+                    script_pubkey,
+                    tx["txid"],
+                    tx["vout"],
+                )
+                for tx in r.json()
+            ],
+            key=lambda u: u.confirmations,
+        )
+
+    def broadcast(self, tx_hex):
+        endpoint = self.endpoint + self.push_tx
+        r = requests.post(endpoint, data=tx_hex)
+        return True if r.status_code == 200 else False

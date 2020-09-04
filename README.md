@@ -62,5 +62,3 @@ Add yourself to [authors](AUTHORS.md) and make a pull request on a new branch. U
 ## Notes
 -------------
 * oogway is one of many Python Bitcoin libraries. It was heavily inspired by [ofek/bit](https://github.com/ofek/bit). oogway tries to focus on security while remaining simple and accessible.
-
-* oogway can be used on top of [ofek/bit](https://github.com/ofek/bit) for safety-focused operations including secure wallet generation, safe bitcoin units operations and conversions and cryptographical address validation.

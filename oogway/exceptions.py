@@ -3,3 +3,6 @@ class NodeError(Exception):
 
 class ApiError(Exception):
     pass
+
+class InsufficientFunds(Exception):
+    pass
