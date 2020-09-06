@@ -310,7 +310,7 @@ class PrivateKey(BaseKey):
         unspents, outputs = sanitize_tx_data(
             unspents,
             outputs,
-            (fee or get_fees()) if self.network == "mainnet" else 1,
+            (fee or get_fees()) if self.network == "mainnet" else 2,
             leftover or return_address,
             combine=combine,
             message=message,
@@ -372,7 +372,7 @@ class PrivateKey(BaseKey):
 
         tx_hex = self.create_transaction(
             outputs,
-            fee=(fee or get_fees()) if self.network == "mainnet" else 1,
+            fee=(fee or get_fees()) if self.network == "mainnet" else 2,
             absolute_fee=absolute_fee,
             leftover=leftover,
             combine=combine,
@@ -442,7 +442,7 @@ class PrivateKey(BaseKey):
         unspents, outputs = sanitize_tx_data(
             unspents or Net(network=self.network).utxo(address),
             outputs,
-            (fee or get_fees()) if self.network == "mainnet" else 1,
+            (fee or get_fees()) if self.network == "mainnet" else 2,
             leftover or address,
             combine=combine,
             message=message,
