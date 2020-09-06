@@ -55,3 +55,15 @@ title: Reference
     * **script**[str]: _Script._
     * **hash**[str]: _Transaction hash._
     * **index**[int]: _Index._
+
+---------
+
+## Broadcast
+
+**oogway.Net.txs(** tx_hex **)**
+
+**Parameters:**
+* **tx_hex**[str]: _Raw transaction in hex format._
+
+**Returns:**
+* [bool]: _Broadcast status._ (`True`, `False`)

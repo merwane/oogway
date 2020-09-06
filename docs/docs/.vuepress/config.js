@@ -24,6 +24,22 @@ module.exports = {
               ]
             },
             {
+              title: 'Network',
+              collapsable: true,
+              children: [
+                  '/network/',
+                  '/network/reference'
+              ]
+            },
+            {
+              title: 'Node',
+              collapsable: true,
+              children: [
+                  '/node/',
+                  '/node/reference'
+              ]
+            },
+            {
               title: 'Validation',
               collapsable: true,
               children: [
@@ -48,6 +64,14 @@ module.exports = {
               ]
             },
             {
+              title: 'Transaction',
+              collapsable: true,
+              children: [
+                  '/tx/',
+                  '/tx/reference'
+              ]
+            },
+            {
               title: 'Fees',
               collapsable: true,
               children: [
@@ -63,22 +87,6 @@ module.exports = {
                   '/payments/reference'
               ]
             },
-            {
-              title: 'Network',
-              collapsable: true,
-              children: [
-                  '/network/',
-                  '/network/reference'
-              ]
-            },
-            {
-              title: 'Node',
-              collapsable: true,
-              children: [
-                  '/node/',
-                  '/node/reference'
-              ]
-            }
           ]
     },
     head: [
