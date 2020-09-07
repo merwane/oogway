@@ -38,3 +38,14 @@ Create, sign and broadcast a transaction in one operation:
 >>> tx.send(outputs)
 '5f98ce3f4e65a79f3eeed6179898e4f355f0883a5b83bfb9aabac4154a5b0108'
 ```
+
+## CLI
+
+You can also broadcast a transaction using the CLI:
+
+```console
+$ oogway broadcast <raw hex transaction> --network testnet
+
+5c8d4edc2d15103fd6706f84bc0477921836f504e31b8834ae772ff97402695b
+
+```
