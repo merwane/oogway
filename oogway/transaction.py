@@ -44,8 +44,9 @@ from .tx import (
     address_to_scriptpubkey,
 )
 from .utils.opcodes import OP_0, OP_PUSH_20, OP_PUSH_32
-from .utils.utils import hex_to_bytes, bytes_to_hex, int_to_varint
+from .utils.utils import hex_to_bytes, bytes_to_hex, int_to_varint, epoch_to_bytes
 from .key import Key
+from .utils.constants import LOCK_TIME
 
 class BaseKey:
     """This class represents a point on the elliptic curve secp256k1 and
@@ -264,7 +265,8 @@ class PrivateKey(BaseKey):
         message=None,
         unspents=None,
         message_is_hex=False,
-        replace_by_fee=False
+        replace_by_fee=False,
+        lock_time=LOCK_TIME
     ):  # pragma: no cover
         """Creates a signed P2PKH transaction.
         :param outputs: A sequence of outputs you wish to send in the form
@@ -319,8 +321,13 @@ class PrivateKey(BaseKey):
             message_is_hex=message_is_hex,
             replace_by_fee=replace_by_fee
         )
+        
+        if lock_time == LOCK_TIME:
+            lock_time = LOCK_TIME
+        else:
+            lock_time = epoch_to_bytes(lock_time)
 
-        return create_new_transaction(self, unspents, outputs)
+        return create_new_transaction(self, unspents, outputs, lock_time)
 
     def send(
         self,
@@ -332,7 +339,8 @@ class PrivateKey(BaseKey):
         message=None,
         unspents=None,
         message_is_hex=False,
-        replace_by_fee=False
+        replace_by_fee=False,
+        lock_time=LOCK_TIME
     ):  # pragma: no cover
         """Creates a signed P2PKH transaction and attempts to broadcast it on
         the blockchain. This accepts the same arguments as
@@ -369,6 +377,10 @@ class PrivateKey(BaseKey):
         :returns: The transaction ID.
         :rtype: ``str``
         """
+        if lock_time == LOCK_TIME:
+            lock_time = LOCK_TIME
+        else:
+            lock_time = epoch_to_bytes(lock_time)
 
         tx_hex = self.create_transaction(
             outputs,
@@ -379,7 +391,8 @@ class PrivateKey(BaseKey):
             message=message,
             unspents=unspents,
             message_is_hex=message_is_hex,
-            replace_by_fee=replace_by_fee
+            replace_by_fee=replace_by_fee,
+            lock_time=lock_time
         )
 
         Net(network=self.network).broadcast(tx_hex)
@@ -399,7 +412,8 @@ class PrivateKey(BaseKey):
         message=None,
         unspents=None,
         message_is_hex=False,
-        replace_by_fee=False
+        replace_by_fee=False,
+        lock_time=LOCK_TIME
     ):  # pragma: no cover
         """Prepares a P2PKH transaction for offline signing.
         :param address: The address the funds will be sent from.
@@ -456,7 +470,7 @@ class PrivateKey(BaseKey):
 
         return json.dumps(data, separators=(',', ':'))
 
-    def sign_transaction(self, tx_data, unspents=None):  # pragma: no cover
+    def sign_transaction(self, tx_data, unspents=None, lock_time=LOCK_TIME):  # pragma: no cover
         """Creates a signed P2PKH transaction using previously prepared
         transaction data.
         :param tx_data: Hex-encoded transaction or output of :func:`~bit.Key.prepare_transaction`.
@@ -473,8 +487,13 @@ class PrivateKey(BaseKey):
 
             unspents = [Unspent.from_dict(unspent) for unspent in data['unspents']]
             outputs = data['outputs']
-
-            return create_new_transaction(self, unspents, outputs)
+            
+            if lock_time == LOCK_TIME:
+                lock_time = LOCK_TIME
+            else:
+                lock_time = epoch_to_bytes(lock_time)
+            
+            return create_new_transaction(self, unspents, outputs, lock_time)
         except:  # May be hex-encoded transaction using batching:
             try:
                 unspents = unspents or self.get_unspents()

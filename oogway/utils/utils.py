@@ -141,3 +141,8 @@ def get_signatures_from_script(script):
         except ValueError:
             pass
     return sigs
+
+def epoch_to_bytes(epoch):
+    epoch = int(epoch)
+    epoch = epoch.to_bytes(4, byteorder='little')
+    return epoch

@@ -15,7 +15,7 @@ title: Reference
 
 ---------
 
-**oogway.Tx.create_transaction(** outputs, fee, leftover, unspents **)**
+**oogway.Tx.create_transaction(** outputs, fee, leftover, unspents, lock_time **)**
 
 **Parameters:**
 * **outputs**[[tuple]]: _Array of outputs consisting of receiver address + amount in satoshi._
@@ -24,6 +24,7 @@ title: Reference
 * **fee**[int]: Transaction fee in Satoshis per byte._ If no fee is specified, the fastest fee will be calculated and used.
 * **leftover**[str]: _Address receiving leftover._ If no address is specified, the leftover will be sent back to the sender address.
 * **unspents**[array]: _Unspents of sender address._ If no unspents are specified, they will be queried automatically.
+* **lock_time**[int]: _Epoch time for the transaction to be valid to broadcast, specified in Unix epoch time._ If no locktime is specified, none will be used.
 
 **Returns:**
 * [str]: _Raw transaction in hex format._
@@ -39,6 +40,7 @@ title: Reference
 * **fee**[int]: Transaction fee in Satoshis per byte._ If no fee is specified, the fastest fee will be calculated and used.
 * **leftover**[str]: _Address receiving leftover._ If no address is specified, the leftover will be sent back to the sender address.
 * **unspents**[array]: _Unspents of sender address._ If no unspents are specified, they will be queried automatically.
+* **lock_time**[int]: _Epoch time for the transaction to be valid to broadcast, specified in Unix epoch time._ If no locktime is specified, none will be used.
 
 **Returns:**
 * [str]: _Hash of the broadcasted transaction._

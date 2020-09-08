@@ -10,4 +10,4 @@ from .utils.opcodes import script
 from .transaction import PrivateKey as Tx
 
 name = "oogway"
-__version__ = "0.6.1"
+__version__ = "0.6.2"

@@ -733,10 +733,9 @@ def sign_tx(private_key, tx, *, unspents):
     return tx.to_hex()
 
 
-def create_new_transaction(private_key, unspents, outputs):
+def create_new_transaction(private_key, unspents, outputs, lock_time=LOCK_TIME):
 
     version = VERSION_1
-    lock_time = LOCK_TIME
     outputs = construct_outputs(outputs)
 
     # Optimize for speed, not memory, by pre-computing values.

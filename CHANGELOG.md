@@ -1,5 +1,9 @@
 # RELEASES
 
+## *0.6.2* (09-08-2020)
+_______________________
+* Added locktime to transactions
+
 ## *0.6.0* (09-04-2020)
 _______________________
 * Added transaction methods
