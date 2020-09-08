@@ -9,6 +9,6 @@ features:
   details: It's hard to boil things down to their simplest form in technology. This is why having a layer of abstraction on strong cryptography and Bitcoin is oogway's priority.
 - title: Convenient
   details: The library comes with most functions developers need to build on Bitcoin without digging into low-level stuff. It even has a CLI for running test functions in a dev environment.
-footer: Donate – 1FHXDkRLhoCziRjftaPB3fELUYrZomFanx
+footer: Donate – bc1qs3frll3lan0v0r3xsfe8r3phrc24smn4hkmwm4
 ---
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat&logo=bitcoin&color=orange)](https://pypi.org/project/oogway)
