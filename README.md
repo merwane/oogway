@@ -23,7 +23,7 @@
 '041d5e3b36948035f6cee1d349e02fa3c8cb2f07c1aa3692abfe2699e7693423162a184b8bf58aec320368ddb58ff16705f3ecfed23f8cc080b1225a0e90a74c6c'
 ```
 
-The library allows you to easily generate Bitcoin keypairs or create, sign and broadcast transactions. It can also do other things such as validate addresses (cryptographically) or safely convert and operate between bitcoin units and it supports multisig.
+The library allows you to easily generate Bitcoin keypairs or create, sign and broadcast transactions. It can also do other things such as validate addresses (cryptographically) or safely convert and operate between bitcoin units. oogway also supports multisig.
 
 oogway also has a built-in CLI to simplify some tasks:
 ```console
