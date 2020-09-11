@@ -1,5 +1,9 @@
 # RELEASES
 
+## *0.7.0* (09-11-2020)
+_______________________
+* Added multisig support
+
 ## *0.6.2* (09-08-2020)
 _______________________
 * Added locktime to transactions

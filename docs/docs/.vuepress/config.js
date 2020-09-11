@@ -72,6 +72,14 @@ module.exports = {
               ]
             },
             {
+              title: 'Multisig',
+              collapsable: true,
+              children: [
+                  '/multisig/',
+                  '/multisig/reference'
+              ]
+            },
+            {
               title: 'Fees',
               collapsable: true,
               children: [

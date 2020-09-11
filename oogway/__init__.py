@@ -8,6 +8,7 @@ from .net import Net
 from .rpc import AuthServiceProxy as Node
 from .utils.opcodes import script
 from .transaction import PrivateKey as Tx
+from .transaction import MultiSig
 
 name = "oogway"
-__version__ = "0.6.2"
+__version__ = "0.7.0"
