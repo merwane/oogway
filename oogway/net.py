@@ -25,3 +25,7 @@ class Net:
     def broadcast(self, tx_hex):
         r = self.provider.broadcast(tx_hex)
         return r
+
+    def transaction(self, txid):
+        r = self.provider.get_transaction(txid)
+        return r

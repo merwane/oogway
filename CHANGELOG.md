@@ -1,5 +1,9 @@
 # RELEASES
 
+## *0.7.1* (11-28-2020)
+_______________________
+* Added transaction explorer method
+
 ## *0.7.0* (09-11-2020)
 _______________________
 * Added multisig support

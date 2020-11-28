@@ -67,3 +67,15 @@ title: Reference
 
 **Returns:**
 * [bool]: _Broadcast status._ (`True`, `False`)
+
+--------
+
+## Transaction explorer
+
+**oogway.Net.transaction(** txid **)**
+
+**Parameters:**
+* **tx_hex**[str]: _Transaction ID._
+
+**Returns:**
+* [dic]: _Transaction information._

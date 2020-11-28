@@ -11,4 +11,4 @@ from .transaction import PrivateKey as Tx
 from .transaction import MultiSig
 
 name = "oogway"
-__version__ = "0.7.0"
+__version__ = "0.7.1"

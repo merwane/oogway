@@ -99,6 +99,7 @@ class Blockstream:
         self.tx_info = "tx/{}/hex"
         self.push_tx = "tx"
         self.unspent = "/utxo"
+        self.tx_txid = "tx/{}"
         self.network = network
 
     def balance(self, address, unit='satoshi'):
@@ -197,3 +198,8 @@ class Blockstream:
         endpoint = self.endpoint + self.push_tx
         r = requests.post(endpoint, data=tx_hex)
         return True if r.status_code == 200 else False
+
+    def get_transaction(self, txid):
+        endpoint = self.endpoint + self.tx_txid
+        r = requests.get(endpoint.format(txid))
+        return r.json()
