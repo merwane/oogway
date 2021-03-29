@@ -41,7 +41,7 @@ $ pip install oogway
 
 ## Documentation
 ---------------
-Read the library documentation at [6conf.com](https://oogway.6conf.com).
+Read the library documentation at [merwanedrai.com](https://oogway.merwanedrai.com).
 
 The documentation is automatically updated after each commit to the master branch. Every pull request adding or modifying features must contain a documentation update (Markdown).
 
