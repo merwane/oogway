@@ -3,7 +3,6 @@ module.exports = {
     description: "A secure Bitcoin utility library for Python.",
     themeConfig:{
         nav: [
-            { text: '6conf', link: 'https://6conf.com' },
             { text: 'GitHub', link: 'https://github.com/merwane/oogway'}
         ],
         sidebar: [
@@ -105,13 +104,13 @@ module.exports = {
       ['meta', { name: 'theme-color', content: '#ff9900' }],
       ['meta', { name: 'og:title', content: 'oogway' }],
       ['meta', { name: 'og:description', content: 'A secure Bitcoin utility library for Python.' }],
-      ['meta', { name: 'og:url', content: 'https://oogway.6conf.com' }],
-      ['meta', { name: 'og:image', content: 'https://oogway.6conf.com/meta_640.png' }],
+      ['meta', { name: 'og:url', content: 'https://oogway.merwanedrai.com' }],
+      ['meta', { name: 'og:image', content: 'https://oogway.merwanedrai.com/meta_640.png' }],
       ['meta', { name: 'twitter:title', content: 'oogway' }],
       ['meta', { name: 'twitter:description', content: 'A secure Bitcoin utility library for Python.'}],
       ['meta', { name: 'twitter:card', content: 'summary' }],
       ['meta', { name: 'twitter:site', content: '@merwanedr' }],
-      ['meta', { name: 'twitter:image', content: 'https://oogway.6conf.com/meta_640.png' }],
+      ['meta', { name: 'twitter:image', content: 'https://oogway.merwanedrai.com/meta_640.png' }],
       ['meta', { name: 'twitter:image:alt', content: 'Bitcoin logo' }],
       ['meta', { property: 'og:type', content: 'website' }]
     ]
